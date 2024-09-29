@@ -1,0 +1,16 @@
+# Site settings
+title: Camil Gosmanov
+description: Camil Gosmanov Website
+# baseurl: "" # subpath
+#url: "localhost:3000"
+
+# User settings
+username: Camil Gosmanov
+user_description: x
+user_title: 
+email: camil@ou.edu
+linkedin_username: camilgosmanov
+github_username:  camilgosmanov
+
+exclude: ['package.json', 'src', 'node_modules', 'vendor']
+
