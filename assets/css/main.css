@@ -9,8 +9,10 @@
 #particles-js .header .header-icons .tooltip {
   position: relative;
   display: inline-block;
+  text-align: center;
 }
 
+/* Default tooltip behavior (Desktop - Unchanged) */
 #particles-js .header .header-icons .tooltip .tooltiptext {
     visibility: hidden;
     width: 80px;
@@ -21,18 +23,54 @@
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    bottom: -10%; /* Position the tooltip below the icon */
+    bottom: -10%; /* Reverted to original position */
     left: 50%;
-    margin-left: -40px; /* Use half of the width to center the tooltip */
+    margin-left: -40px;
     opacity: 0;
-    transition: opacity 0.01s;
-    transform: translateY(100%); /* Move the tooltip down by its own height */
-  }
+    transition: opacity 0.01s ease-in-out;
+    transform: translateY(100%); /* Keep original hover effect */
+}
 
+/* Show tooltips on hover (Desktop - Unchanged) */
 #particles-js .header .header-icons .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
+
+/* Mobile-specific tooltip adjustments */
+@media (max-width: 768px) {
+  #particles-js .header .header-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  #particles-js .header .header-icons .tooltip .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    width: 60px; /* Smaller tooltips */
+    font-size: 12px; /* Reduce font size */
+    bottom: -70%; /* Move tooltip closer */
+    left: 50%;
+    margin-left: -30px;
+    transform: none;
+    white-space: nowrap;
+  }
+
+  body, html {
+    overflow: hidden; /* Disable scrolling */
+    height: 100%; /* Make sure body takes full height */
+  }
+
+  /* Move content up slightly */
+  .header {
+    margin-top: -40px; /* Adjust this value as needed */
+  }
+}
+
+
+
 
 .header {
     /* ... existing styles ... */
