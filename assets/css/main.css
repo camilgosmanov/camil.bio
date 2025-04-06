@@ -68,8 +68,8 @@
   }
 
   body, html {
-    overflow: auto; /* Allow scrolling */
-    height: auto; /* Let the content determine height */
+    overflow: hidden; /* Disable scrolling on mobile */
+    height: 100%; /* Full height */
   }
 
   /* Slight upward adjustment for header content */
