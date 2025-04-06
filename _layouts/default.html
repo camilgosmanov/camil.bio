@@ -89,16 +89,15 @@
 
 
     <script>
-      if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-        const iconContainer = document.querySelector('.header-icons');
+      const iconContainer = document.querySelector('.header-icons');
 
-        ['touchstart', 'touchmove', 'touchend', 'pointerdown', 'pointermove', 'pointerup'].forEach(eventType => {
-          iconContainer.addEventListener(eventType, function(event) {
-            event.stopImmediatePropagation();
-          }, { passive: false, capture: true });
-        });
-      }
+      ['touchstart', 'touchmove', 'touchend', 'pointerdown', 'pointermove', 'pointerup'].forEach(eventType => {
+        iconContainer?.addEventListener(eventType, function(event) {
+          event.stopImmediatePropagation();
+        }, { passive: false, capture: true });
+      });
     </script>
+
 
 
     
