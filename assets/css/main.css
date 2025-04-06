@@ -98,7 +98,14 @@
   color: #fff;
 }
 
-/* Ensure Naker background doesn't block interactions */
+
 #naker-bg {
-  pointer-events: none;
+  pointer-events: none; /* Ensure it doesn't block interactions */
+  background: linear-gradient(to right, #1456cd, #321667); /* Fallback gradient */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
