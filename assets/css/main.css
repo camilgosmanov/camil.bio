@@ -101,7 +101,7 @@
 
 #naker-bg {
   pointer-events: none; /* Ensure it doesn't block interactions */
-  background: linear-gradient(to right, #1456cd, #321667); /* Fallback gradient */
+  background: linear-gradient(to right, #1456cd 30%, #321667 70%);
   position: fixed;
   top: 0;
   left: 0;
