@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="../assets/css/devicon.min.css">
 <html lang="en">
   {% include head.html %}
   <body style="background-color: #1a222c;">
@@ -64,8 +63,8 @@
   
     {{ content }}
   
-    <!-- Naker (LOCAL, NO CDN) -->
-    <script
+    <!-- Naker (LOCAL, NO CDN) - Loaded async to improve page performance -->
+    <script defer
       src="/assets/naker/viewer.js"
       data-container="naker-bg"
       data-option='{
